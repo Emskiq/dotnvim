@@ -15,3 +15,7 @@
     ```bash
     git clone https://github.com/Emskiq/dotnvim.git ~/.config/nvim
     ```
+2. Packer installation
+    ```bash
+   git clone --depth 1 https://github.com/wbthomason/packer.nvim\ ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+    ```
