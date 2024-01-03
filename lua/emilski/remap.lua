@@ -22,3 +22,5 @@ vim.keymap.set({"n", "v"}, "<leader>d", [["_d]])
 -- Replace the selected word
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
+-- Clear last search highlights
+vim.keymap.set("n", "<Esc>", "<cmd>noh<CR>")
