@@ -24,3 +24,6 @@ vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><
 
 -- Clear last search highlights
 vim.keymap.set("n", "<Esc>", "<cmd>noh<CR>")
+
+-- Set GitSign column Transperant (when changing the background to light/dark)
+vim.keymap.set("n", "<leader>gs", "<cmd>highlight SignColumn guibg=NONE<CR>")
