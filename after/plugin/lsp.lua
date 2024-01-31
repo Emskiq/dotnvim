@@ -13,11 +13,16 @@ end)
 -- LSP Specific settings (for Mason, C++ and Lua)
 require('mason').setup({})
 require('mason-lspconfig').setup({
-	ensure_installed = {'clangd', 'lua_ls'},
+    ensure_installed = {'clangd', 'lua_ls', 'solang'},
 })
 
 require('lspconfig').clangd.setup({
     cmd = {'clangd', '--header-insertion=never'},
+})
+
+require('lspconfig').solang.setup({
+    cmd = {'nomicfoundation-solidity-language-server', '--stdio'},
+    filetypes = { 'solidity' },
 })
 
 local lua_opts = lsp_zero.nvim_lua_ls()
