@@ -13,20 +13,27 @@ end)
 -- LSP Specific settings (for Mason, C++ and Lua)
 require('mason').setup({})
 require('mason-lspconfig').setup({
-    ensure_installed = {'clangd', 'lua_ls', 'solang'},
+    ensure_installed = {'clangd', 'lua_ls', 'solidity'},
 })
 
-require('lspconfig').clangd.setup({
+local lspconfig = require 'lspconfig'
+
+-- C/C++
+lspconfig.clangd.setup({
     cmd = {'clangd', '--header-insertion=never'},
 })
 
-require('lspconfig').solang.setup({
+-- Lua
+local lua_opts = lsp_zero.nvim_lua_ls()
+lspconfig.lua_ls.setup(lua_opts)
+
+-- Solidity
+lspconfig.solidity.setup({
     cmd = {'nomicfoundation-solidity-language-server', '--stdio'},
     filetypes = { 'solidity' },
+    root_dir = lspconfig.util.find_git_ancestor,
+    single_file_support = true,
 })
-
-local lua_opts = lsp_zero.nvim_lua_ls()
-require('lspconfig').lua_ls.setup(lua_opts)
 
 -- Auto completion settings
 local cmp = require('cmp')
