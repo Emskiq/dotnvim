@@ -51,4 +51,6 @@ return require('packer').startup(function(use)
 
   use { 'numToStr/Comment.nvim' }
 
+  use { 'simrat39/rust-tools.nvim' }
+
 end)
