@@ -4,12 +4,11 @@
 
 ### Prerequisites
 
-- Neovim version > 0.9.0
-  
+- Neovim version > 0.9.0<br>
   (version of the initial commit is 0.10.0-devXXXX)
 
 ### Installation
-0. Remove/backup any existing Neovim configurations
+0. Remove/backup any existing Neovim configurations, that are located in:
    
     `~/.config/nvim`
 
