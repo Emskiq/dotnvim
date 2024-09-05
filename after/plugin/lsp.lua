@@ -6,6 +6,7 @@ lsp_zero.on_attach(function(client, bufnr)
 	vim.diagnostic.disable()
 
 	vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, opts)
+	vim.keymap.set("n", "fu", function() vim.lsp.buf.references() end, opts)
 	vim.keymap.set("n", "]d", function() vim.diagnostic.goto_next() end, opts)
 	vim.keymap.set("n", "[d", function() vim.diagnostic.goto_prev() end, opts)
 end)
