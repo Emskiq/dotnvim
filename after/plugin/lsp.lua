@@ -36,6 +36,9 @@ lspconfig.solidity.setup({
     single_file_support = true,
 })
 
+-- Typescript
+lspconfig.tsserver.setup{}
+
 -- Auto completion settings
 local cmp = require('cmp')
 local cmp_select = {behavior = cmp.SelectBehavior.Select}
