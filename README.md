@@ -51,3 +51,15 @@
 >    This command is necessary for the lspconfig to run the Solidity language server correctly.
 >
 > Reference: [Solidity LSP Setup Tutorial](https://wizzardhat.com/solidity-lsp-neovim-setup/).
+
+<br/>
+
+<br/>
+
+> **_Note for TypeScript LSP Support:_** Ensure you have the latest version of Node.js and npm installed.
+>
+> Moreover Install `typescript` and `typescript-language-server` using npm:
+>
+>    ```bash
+>    sudo npm install -g typescript typescript-language-server
+>    ```
