@@ -37,7 +37,7 @@ lspconfig.solidity.setup({
 })
 
 -- Typescript
-lspconfig.tsserver.setup{}
+lspconfig.ts_ls.setup{}
 
 -- Auto completion settings
 local cmp = require('cmp')
