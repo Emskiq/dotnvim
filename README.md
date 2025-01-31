@@ -49,8 +49,7 @@
 >    ```
 >
 >    This command is necessary for the lspconfig to run the Solidity language server correctly.
->
-> Reference: [Solidity LSP Setup Tutorial](https://wizzardhat.com/solidity-lsp-neovim-setup/).
+
 
 <br/>
 
