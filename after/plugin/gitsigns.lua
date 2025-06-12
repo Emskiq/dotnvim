@@ -6,6 +6,8 @@ vim.keymap.set("n", "<leader>gs", "<cmd>highlight SignColumn guibg=NONE<CR>")
 require('gitsigns').setup{
     on_attach = function(bufnr)
         local gitsigns = require('gitsigns')
+        local gs = package.loaded.gitsigns
+
 
         local function map(mode, l, r, opts)
             opts = opts or {}
@@ -29,5 +31,8 @@ require('gitsigns').setup{
                 gitsigns.nav_hunk('prev')
             end
         end)
+
+        -- add blame popup
+        map('n', '<leader>gb', gitsigns.blame)
     end
 }

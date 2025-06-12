@@ -5,6 +5,9 @@ lsp_zero.on_attach(function(client, bufnr)
 
 	vim.diagnostic.config({
 		signs = false,
+		highlight = false,
+		underline = false,
+		virtual_text = false,
 	})
 
 	vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, opts)
@@ -16,7 +19,7 @@ end)
 -- LSP Specific settings (for Mason, C++ , Lua and Rust)
 require('mason').setup({})
 require('mason-lspconfig').setup({
-    ensure_installed = {'clangd', 'lua_ls', 'solidity', 'rust_analyzer'},
+    ensure_installed = {'clangd', 'lua_ls', 'solidity', 'rust_analyzer', 'pylsp'},
 })
 
 local lspconfig = require 'lspconfig'
@@ -40,6 +43,9 @@ lspconfig.solidity.setup({
 
 -- Typescript
 lspconfig.ts_ls.setup{}
+
+-- Python
+lspconfig.pylsp.setup{}
 
 -- Auto completion settings
 local cmp = require('cmp')
