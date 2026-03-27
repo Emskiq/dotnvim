@@ -24,3 +24,7 @@ vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><
 
 -- Clear last search highlights
 vim.keymap.set("n", "<Esc>", "<cmd>noh<CR>")
+
+
+vim.keymap.set("n", "<leader>gpp", ':!git pull && git commit -am "." && git push<CR>', { desc = "quick git push" })
+vim.keymap.set("n", "<leader>gpm", ':!git pull && git commit -am "" && git push<Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left>', { desc = "git push with msg" })
