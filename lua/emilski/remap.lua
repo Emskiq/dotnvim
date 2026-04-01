@@ -26,5 +26,11 @@ vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><
 vim.keymap.set("n", "<Esc>", "<cmd>noh<CR>")
 
 
+-- Git fast commander: pull, pull + commit -am + push, etc
+vim.keymap.set("n", "<leader>gp", ':!git pull && git commit -am "." && git push<CR>', { desc = "quick git push" })
 vim.keymap.set("n", "<leader>gpp", ':!git pull && git commit -am "." && git push<CR>', { desc = "quick git push" })
 vim.keymap.set("n", "<leader>gpm", ':!git pull && git commit -am "" && git push<Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left>', { desc = "git push with msg" })
+
+-- Cargo build fast commands
+vim.keymap.set("n", "<leader>cbb", ":!cargo build 2>&1 | head -60<CR>", { desc = "cargo build" })
+vim.keymap.set("n", "<leader>cbp", ":!cargo build -p ", { desc = "cargo build -p" })
