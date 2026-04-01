@@ -27,7 +27,7 @@ vim.keymap.set("n", "<Esc>", "<cmd>noh<CR>")
 
 
 -- Git fast commander: pull, pull + commit -am + push, etc
-vim.keymap.set("n", "<leader>gp", ':!git pull && git commit -am "." && git push<CR>', { desc = "quick git push" })
+vim.keymap.set("n", "<leader>gp", ':!git pull', { desc = "git pull" })
 vim.keymap.set("n", "<leader>gpp", ':!git pull && git commit -am "." && git push<CR>', { desc = "quick git push" })
 vim.keymap.set("n", "<leader>gpm", ':!git pull && git commit -am "" && git push<Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left>', { desc = "git push with msg" })
 
