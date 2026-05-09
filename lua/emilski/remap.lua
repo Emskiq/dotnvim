@@ -34,3 +34,7 @@ vim.keymap.set("n", "<leader>gpm", ':!git pull && git commit -am "" && git push<
 -- Cargo build fast commands
 vim.keymap.set("n", "<leader>cbb", ":!cargo build 2>&1 | head -60<CR>", { desc = "cargo build" })
 vim.keymap.set("n", "<leader>cbp", ":!cargo build -p ", { desc = "cargo build -p" })
+
+-- Set background
+vim.keymap.set("n", "<leader>sbd", ":set bg=dark<CR>", { desc = "dark background" })
+vim.keymap.set("n", "<leader>sbl", ":set bg=light<CR>", { desc = "light background" })
